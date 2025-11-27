@@ -3,8 +3,9 @@ package grafo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InitRomenia {
-    public void initRomenia() {
+public class Romenia {
+    public void init() {
+
         List<Estado> estados = new ArrayList<>();
 
         Estado arad = new Estado("Arad");
@@ -118,6 +119,5 @@ public class InitRomenia {
         iasi.transicoes.add(new Transicao(neamt, 87));
         // Neamt
         neamt.transicoes.add(new Transicao(iasi, 87));
-
     }
 }
