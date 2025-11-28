@@ -9,6 +9,7 @@ public class Main {
         romenia.init(); // inicializar romenia
 
         BuscaGulosa guloso = new BuscaGulosa();
+        Aestrela a = new Aestrela();
 
 
         Estado inicio = romenia.getEstado("Bucharest");
@@ -17,6 +18,20 @@ public class Main {
         if(inicio != null && destino != null) {
             //---------------------------------------------------
             List<No> caminhos = guloso.execute(inicio, destino);
+
+            for(int i = caminhos.size() - 1; i >= 0; i--) {
+                if(i != 0){
+                    System.out.print(caminhos.get(i).cidadeAtual.nome + " -> ");
+                    continue;
+                }
+                System.out.println(caminhos.get(i).cidadeAtual.nome);
+            }
+            System.out.println("CUSTO: " + caminhos.get(0).custoAcumulado);
+        }
+
+        if(inicio != null && destino != null) {
+            //---------------------------------------------------
+            List<No> caminhos = a.execute(inicio, destino);
 
             for(int i = caminhos.size() - 1; i >= 0; i--) {
                 if(i != 0){
