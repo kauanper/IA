@@ -10,7 +10,7 @@ public class Main {
 
         BuscaEmLargura bfs = new BuscaEmLargura();
         BuscaUniforme uniform = new BuscaUniforme();
-        TestAleatorio aleatorio = new TestAleatorio();
+        BuscaEmProfundidade dfs = new BuscaEmProfundidade();
 
         Estado inicio = romenia.getEstado("Bucharest");
         Estado destino = romenia.getEstado("Arad");
@@ -32,6 +32,20 @@ public class Main {
         if(inicio != null && destino != null) {
             //---------------------------------------------------
             List<No> caminhos = uniform.execute(inicio, destino);
+
+            for(int i = caminhos.size() - 1; i >= 0; i--) {
+                if(i != 0){
+                    System.out.print(caminhos.get(i).cidadeAtual.nome + " -> ");
+                    continue;
+                }
+                System.out.println(caminhos.get(i).cidadeAtual.nome);
+            }
+            System.out.println("CUSTO: " + caminhos.get(0).custoAcumulado);
+        }
+
+        if(inicio != null && destino != null) {
+            //---------------------------------------------------
+            List<No> caminhos = dfs.execute(inicio, destino);
 
             for(int i = caminhos.size() - 1; i >= 0; i--) {
                 if(i != 0){
