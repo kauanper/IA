@@ -2,10 +2,7 @@ import grafo.Estado;
 import grafo.Mapa;
 import grafo.Transicao;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BuscaEmLargura {
 
@@ -20,7 +17,7 @@ public class BuscaEmLargura {
             return caminho;
         }
 
-        Queue<No> borda = new LinkedList<No>();
+        Queue<No> borda = new LinkedList<>();
         borda.add(raiz);
 
         List<Estado> explorados = new ArrayList<Estado>();
