@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Romenia {
-    public void init() {
+    List<Estado> estados = new ArrayList<>();
 
-        List<Estado> estados = new ArrayList<>();
+    public void init() {
 
         Estado arad = new Estado("Arad");
         Estado zerind = new Estado("Zerind");
@@ -119,5 +119,14 @@ public class Romenia {
         iasi.transicoes.add(new Transicao(neamt, 87));
         // Neamt
         neamt.transicoes.add(new Transicao(iasi, 87));
+    }
+
+    public Estado getEstado(String termo) {
+        for (Estado estado : estados) {
+            if(estado.nome.equals(termo)) {
+                return estado;
+            }
+        }
+        return null;
     }
 }
