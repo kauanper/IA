@@ -1,11 +1,11 @@
 package grafo;
 
 public class Transicao {
-    public Estado estadoDestino;
+    public Estado estado;
     public int custo;
 
     public Transicao(Estado estadoDestino, int custo) {
-        this.estadoDestino = estadoDestino;
+        this.estado = estadoDestino;
         this.custo = custo;
     }
 }
