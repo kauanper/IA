@@ -10,8 +10,8 @@ public class Main {
 
         BuscaEmLargura bfs = new BuscaEmLargura();
 
-        Estado inicio = romenia.getEstado("Arad");
-        Estado destino = romenia.getEstado("Urziceni");
+        Estado inicio = romenia.getEstado("Zerind");
+        Estado destino = romenia.getEstado("Giurgiu");
 
         if(inicio != null && destino != null) {
             List<No> caminhos = bfs.execute(inicio, destino);
