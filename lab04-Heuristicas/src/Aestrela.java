@@ -57,10 +57,6 @@ public class Aestrela {
                         borda.add(filho);
                     }
                 }
-
-
-
-
             }
 
         }
