@@ -10,6 +10,7 @@ public class Main {
 
         BuscaEmLargura bfs = new BuscaEmLargura();
         BuscaUniforme uniform = new BuscaUniforme();
+        TestAleatorio aleatorio = new TestAleatorio();
 
         Estado inicio = romenia.getEstado("Bucharest");
         Estado destino = romenia.getEstado("Arad");
