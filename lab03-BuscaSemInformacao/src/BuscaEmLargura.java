@@ -39,6 +39,7 @@ public class BuscaEmLargura {
                             caminho.add(filho);
                             filho = filho.pai;
                         }
+                        caminho.add(raiz);
                         return caminho;
                     }
                     borda.add(filho);
